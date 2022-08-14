@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePropasTable extends Migration
+class CreatePublicationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreatePropasTable extends Migration
      */
     public function up()
     {
-        Schema::create('propas', function (Blueprint $table) {
+        Schema::create('publications', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_pan');
-            $table->integer('id_prod');
-            $table->date('datepp');
-            $table->integer('qte');
+            $table->string('catpub');
+            $table->string('titre');
+            $table->string('descrip');
+            $table->date('date');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreatePropasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('propas');
+        Schema::dropIfExists('publications');
     }
 }

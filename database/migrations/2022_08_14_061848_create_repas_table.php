@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePropasTable extends Migration
+class CreateRepasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreatePropasTable extends Migration
      */
     public function up()
     {
-        Schema::create('propas', function (Blueprint $table) {
+        Schema::create('repas', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_pan');
-            $table->integer('id_prod');
-            $table->date('datepp');
-            $table->integer('qte');
             $table->timestamps();
         });
     }
@@ -30,6 +26,6 @@ class CreatePropasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('propas');
+        Schema::dropIfExists('repas');
     }
 }
