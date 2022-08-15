@@ -12,6 +12,7 @@
         @livewireStyles
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/diki.css') }}">
 
         <!-- Scripts -->
 {{--         @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
