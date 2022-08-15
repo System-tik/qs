@@ -10,6 +10,7 @@
        
         <!-- Styles -->
         @livewireStyles
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         <!-- Scripts -->
 {{--         @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
@@ -18,7 +19,7 @@
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+            {{-- @livewire('navigation-menu') --}}
 
             <!-- Page Heading -->
             @if (isset($header))
@@ -38,5 +39,6 @@
         @stack('modals')
 
         @livewireScripts
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

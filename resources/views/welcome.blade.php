@@ -19,6 +19,7 @@
     <body class="">
         
         @yield('content')
+        @yield('dash')
 
         @livewireScripts
         
