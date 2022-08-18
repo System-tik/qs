@@ -1,96 +1,30 @@
-<div class="">
+<div class="w-screen bg-cover h-96" style="background-image: url({{asset('images/b.png')}}); background-repeat:no-repeat; background-size:100% 100%">
     {{-- Stop trying to control. --}}
+    <nav class="p-3 lg:hidden" style="background-color: rgba(0, 0, 0, .7)">
+      <div class="flex justify-between " >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 p-1 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" class="text-white" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 p-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" class="text-white" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      </div>
+      <div class="mt-2 text-white">
+        <a href="#" class="">Accueil</a>
+      </div>
+      <div class="mt-2 text-white">
+        <a href="#">Creation compte</a>
+      </div>
+      <div class="mt-2 text-white">
+        <a href="#">Connexion</a>
+      </div>
+      <div class="mt-2 text-white">
+        <a href="#">Panier</a>
+      </div>
+      <div class="mt-2 text-white">
+        <a href="#">Profil</a>
+      </div>
+</div>
+    </nav>
   
-        <img src="{{asset('images/b.png')}}" alt="" class="h-96 w-full">
-        {{-- <div
-  id="carouselDarkVariant"
-  class="carousel slide carousel-fade carousel-dark relative"
-  data-bs-ride="carousel"
-> --}}
-  <!-- Indicators -->
-  {{-- <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-    <button
-      data-bs-target="#carouselDarkVariant"
-      data-bs-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      data-bs-target="#carouselDarkVariant"
-      data-bs-slide-to="1"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      data-bs-target="#carouselDarkVariant"
-      data-bs-slide-to="2"
-      aria-label="Slide 1"
-    ></button>
-  </div> --}}
-
-  <!-- Inner -->
-  {{-- <div class="carousel-inner relative w-full overflow-hidden"> --}}
-    <!-- Single item -->
-    {{-- <div class="carousel-item active relative float-left w-full">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp"
-        class="block w-full"
-        alt="Motorbike Smoke"
-      />
-      <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
- --}}
-    <!-- Single item -->
-    {{-- <div class="carousel-item relative float-left w-full">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(35).webp"
-        class="block w-full"
-        alt="Mountaintop"
-      />
-      <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
- --}}
-    <!-- Single item -->
-   {{--  <div class="carousel-item relative float-left w-full">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(40).webp"
-        class="block w-full"
-        alt="Woman Reading a Book"
-      />
-      <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div> --}}
-  <!-- Inner -->
-
-  <!-- Controls -->
-  {{-- <button
-    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-    type="button"
-    data-bs-target="#carouselDarkVariant"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-    type="button"
-    data-bs-target="#carouselDarkVariant"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
-          
-</div>
- --}}
