@@ -10,105 +10,115 @@
         <b class="bg-green-700"></b>
         <b class="bg-blue-700"></b>
         <b class="bg-yellow-700"></b>
-        <div class="flex flex-row h-16 bg-red-700">
-            <div class="basis-4/5 text-white p-4">
-                <h3 class="font-bold text-lg">Quisine</h3>
-            </div>
-            <div class="basis-1/5 flex flex-row p-2">
-                <div class="text-white p-2 cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                    </svg>
-                </div>
-                <div class="text-white p-2 cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                    </svg>
-                </div>
-                <img src="{{ asset('images/profil1.jpeg') }}" alt="" class="rounded-full w-12 h-18 border-white border-solid border-2 cursor-pointer">
-            </div>
-        </div>
-        <div class="flex flex-1">
-            {{-- side nav --}}
-            <div class="basis-1/5 bg-white px-24 p-5">
-                {{--  --}}
-                <div class="flex flex-col justify-center items-center">
-                    <img src="{{ asset('images/profil1.jpeg') }}" alt="" class=" rounded-full w-14 h-14 border-white border-solid border-2">
-                    <span class="text-sm">John Doe</span>
-                    <span class="text-xs">Administrateur</span>
-                </div>
-                {{-- menu --}}
-                <div class="flex flex-col py-10 text-sm">
-                    <div class="flex px-4 cursor-pointer h-10">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                        </svg>
-                        <span class="px-3">Dashboard</span>
-                    </div>
-                    <div class="flex px-4 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                        </svg>
-                        <span class="px-3">Produits</span>
-                    </div>
-                </div>
-                
-            </div>
-            {{-- Dash space --}}
-            <div class="basis-4/5 bg">
-                <h2 class="text-3xl p-3">Dashboard</h2>
-                <div class="flex text-white">
-                    <livewire:admin.components.c-dashcard color="red">
-                    <livewire:admin.components.c-dashcard color="green">
-                    <livewire:admin.components.c-dashcard color="blue">
-                    <livewire:admin.components.c-dashcard color="yellow">
-                </div>
+        
+        <div class="flex w-full">
+            
+            <!-- component -->
+            <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+            <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
 
-                {{-- crud produit --}}
-                <div class="flex justify-between p-3 m-5 shadow-lg border-slate-600 rounded text-sm cursor-pointer hover:bg-slate-200">
-                    <div class="basis-1/10">
-                        Nom produit {{-- nom produit --}}
+            <!-- page -->
+            <main class="flex flex-col w-full bg-gray-100 text-gray-700" x-data="layout">
+                <!-- header page -->
+                <header class="flex w-full items-center justify-between border-b-2 border-gray-200 bg-red-700 p-2">
+                    <!-- logo -->
+                    <div class="flex items-center space-x-2">
+                        <button type="button" class="text-3xl text-white" @click="asideOpen = !asideOpen"><i class="bx bx-menu"></i></button>
+                        <div class="text-white text-2xl font-bold">Quisine</div>
                     </div>
-                    <div class="basis-1/10">
-                        description {{-- nom produit --}}
-                    </div>
-                    <div class="basis-1/10">
-                        Categorie {{-- nom produit --}}
-                    </div>
-                    <div class="basis-1/10">
-                        0.5kg {{-- nom produit --}}
-                    </div>
-                    <div class="basis-1/10">
-                        500 Fc {{-- nom produit --}}
-                    </div>
-                    <div class="basis-1/10">
-                        Type produit {{-- nom produit --}}
-                    </div>
-                    <div class="basis-1/10">
-                        <button type="submit" class="w-full flex justify-center px-4 text-sm rounded text-blue-700 border-solid border-2 border-blue-700  hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2">
-                            Voir
+
+                    <!-- button profile -->
+                    <div class="flex flex-row">
+                        <div class="flex mr-4 mt-1 cursor-pointer text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </div>
+                        <button type="button" @click="profileOpen = !profileOpen" @click.outside="profileOpen = false"
+                            class="h-9 w-9 overflow-hidden rounded-full">
+                            <img src="{{ asset('images/profil1.jpeg') }}" alt="plchldr.co" />
                         </button>
+
+                        <!-- dropdown profile -->
+                        <div class="absolute right-2 mt-1 w-48 divide-y divide-gray-200 rounded-md border border-gray-200 bg-white shadow-md"
+                            x-show="profileOpen" x-transition>
+                            <div class="flex items-center space-x-2 p-2">
+                                <img src="{{ asset('images/profil1.jpeg') }}" alt="plchldr.co" class="h-9 w-9 rounded-full" />
+                                <div class="font-medium">Joel Kan</div>
+                            </div>
+
+                            <div class="flex flex-col space-y-3 p-2">
+                                <a href="#" class="transition hover:text-red-700">Profil</a>
+                                <a href="#" class="transition hover:text-red-700">Parametres</a>
+                            </div>
+
+                            <div class="p-2">
+                                <button class="flex items-center space-x-2 transition hover:text-red-700">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                                        </path>
+                                    </svg>
+                                    <div>Se deconnecter</div>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="basis-1/10">
-                        <button type="submit" class="w-full flex justify-center px-4 text-sm rounded text-green-700 border-solid border-2 border-green-700  hover:bg-green-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2">
-                            Creer
-                        </button>
-                    </div>
-                    <div class="basis-1/10">
-                        <button type="submit" class="w-full flex justify-center px-4 text-sm rounded text-yellow-700 border-solid border-2 border-yellow-700  hover:bg-yellow-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2">
-                            Modifier
-                        </button>
-                    </div>
-                    <div class="basis-1/10">
-                        <button type="submit" class="w-full flex justify-center px-4 text-sm rounded text-red-700 border-solid border-2 border-red-700  hover:bg-red-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2">
-                            Supprimer
-                        </button>
+                </header>
+
+                <div class="flex">
+                    <!-- sidenav -->
+                    <aside class="flex w-72 flex-col space-y-2 border-r-2 border-gray-200 bg-white p-2" style="height: 90.5vh"
+                        x-show="asideOpen">
+                        <div class="flex flex-col items-center space-x-2 p-2">
+                            <img src="{{ asset('images/profil1.jpeg') }}" alt="plchldr.co" class="h-9 w-9 rounded-full" />
+                            <div class="font-medium">Joel Kan</div>
+                        </div>
+                        <a href="#" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-red-700blue-600">
+                            <span class="text-2xl"><i class="bx bx-home"></i></span>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-red-700blue-600">
+                            <span class="text-2xl"><i class="bx bx-cart"></i></span>
+                            <span>Produit</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-red-700blue-600">
+                            <span class="text-2xl"><i class="bx bx-shopping-bag"></i></span>
+                            <span>Marchandise</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-red-700blue-600">
+                            <span class="text-2xl"><i class="bx bx-shopping-bag"></i></span>
+                            <span>Shopping</span>
+                        </a>
+                        <a href="#" class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-red-700blue-600">
+                            <span class="text-2xl"><i class="bx bx-shopping-bag"></i></span>
+                            <span>Fournisseur</span>
+                        </a>
+                    </aside>
+
+                    <!-- main content page -->
+                    <div class="w-full p-4 bg-white">
+                        {{-- Dash space --}}
+                        <div class="basis-4/5">
+                            <livewire:admin.v-produit>
+                            {{-- <livewire:admin.v-catproduit> --}}
+                            {{-- <livewire:admin.v-dash> --}}
+                            {{-- <livewire:admin.v-fournisseur> --}}
+                        </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <a href="http://" class="hover:text-red-700">Afficher tout</a>
-                </div>
-            </div>
+            </main>
+
+            <script>
+                document.addEventListener("alpine:init", () => {
+                    Alpine.data("layout", () => ({
+                        profileOpen: false,
+                        asideOpen: true,
+                    }));
+                });
+            </script>
+            
         </div>
 
     </div>
