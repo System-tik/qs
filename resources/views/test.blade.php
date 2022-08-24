@@ -9,7 +9,8 @@
 @livewireStyles
 <body>
 
-    <livewire:admin.v-produit />
+    <livewire:admin.v-fournisseur />
+    <livewire:admin.v-commande />
 
 @livewireScripts
 </body>
