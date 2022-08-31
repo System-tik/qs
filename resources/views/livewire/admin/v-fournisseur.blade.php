@@ -1,29 +1,29 @@
 <div>
     {{-- Because she competes with no one, no one can compete with her. --}}
-    <h2 class="text-3xl">Fournisseurs</h2>
-    <div class="flex px-5 mt-3 bg-red-700 text-white">
-        <h2 class="text-lg font-bold p-2">
-            Gestion des Fournisseurs
-        </h2>
+    <div class="flex flex-col px-5 text-gray-600" style="">
+        <h1 class="text-2xl font-bold p-2">
+            Gestion des Produits
+        </h1>
     </div>
     <div class="flex">
+        {{-- Recherche fournisseur --}}
         <div class="flex px-7">
-            <form class="mt-3">
-                <h2 class="mt-2">Recherche fournisseur</h2>
-                <div class="grid gap-6 mt-3">
+            <form class="border p-2 mt-5">
+                <h2 class="">Recherche fournisseur</h2>
+                <div class="flex gap-6 mt-5">
                     <div class="relative z-0">
                     <input type="text" name="" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-red-600 focus:outline-none focus:ring-0" placeholder=" " />
                     <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-red-700 peer-focus:dark:text-red-700">Nom</label>
                     </div>
                 </div>
-                <div class="grid gap-6 mt-5">
+                <div class="flex gap-6 mt-5">
                     <div class="relative">
                         <button type="submit" class="rounded-md bg-green-700 px-5 py-2 text-white">Valider</button>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="flex px-20 mb-5">
+        <div class="flex px-7 mb-16">
             <div class="flex items-center justify-center">
               <div class="w-full">
                 <div class="bg-white">
