@@ -18,7 +18,8 @@ class CreateFournisseursTable extends Migration
             $table->string('nom');
             $table->integer('tel');
             $table->string('adresse');
-            $table->timestamps();
+            $table->json('marchandises')->nullable();
+            $table->timestamps(); 
         });
     }
 
