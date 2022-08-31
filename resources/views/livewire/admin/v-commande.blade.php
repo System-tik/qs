@@ -1,5 +1,5 @@
 <div>
-<<<<<<< HEAD
+{{-- <<<<<<< HEAD --}}
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
     {{-- title content --}}
     <div class="flex px-2 text-gray-600" style="">
@@ -134,7 +134,7 @@
         </div>
     </div>
 </div>
-=======
+{{-- ======= --}}
 <input type="text" wire:model="id_pan">
 @error('id_pan') <span class="error">{{ $message }}</span><br> @enderror
 <input type="text" wire:model="datec">
@@ -166,7 +166,8 @@
 @foreach ($fournisseurs as $fournisseur)
     <p>{{ $fournisseur->nom }}</p>
 @endforeach
+
 </div>
 
 
->>>>>>> 662d0f245a662571ce6c2784d275d708e6c36b72
+{{-- >>>>>>> 662d0f245a662571ce6c2784d275d708e6c36b72 --}}
