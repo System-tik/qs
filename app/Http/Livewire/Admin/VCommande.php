@@ -2,23 +2,13 @@
 
 namespace App\Http\Livewire\Admin;
 
-<<<<<<< HEAD
-=======
 use App\Models\commande;
 use App\Models\fournisseur;
 use Exception;
->>>>>>> 662d0f245a662571ce6c2784d275d708e6c36b72
 use Livewire\Component;
 
 class VCommande extends Component
 {
-<<<<<<< HEAD
-    public function render()
-    {
-        return view('livewire.admin.v-commande');
-    }
-}
-=======
 
     public $etats=[
         ['non traitée','argent perçu','en cours de traitement','traitée','commande annulée'],
@@ -168,4 +158,3 @@ class VCommande extends Component
 }
 
 
->>>>>>> 662d0f245a662571ce6c2784d275d708e6c36b72

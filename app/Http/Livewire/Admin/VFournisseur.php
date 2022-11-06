@@ -2,21 +2,12 @@
 
 namespace App\Http\Livewire\Admin;
 
-<<<<<<< HEAD
-=======
 use App\Models\fournisseur;
 use Exception;
->>>>>>> 662d0f245a662571ce6c2784d275d708e6c36b72
 use Livewire\Component;
 
 class VFournisseur extends Component
 {
-<<<<<<< HEAD
-    public function render()
-    {
-        return view('livewire.admin.v-fournisseur');
-    }
-=======
     public $nom;
     public $tel;
     public $adresse;
@@ -158,5 +149,4 @@ class VFournisseur extends Component
         ]);
         array_push($this->marchandises,$this->marchandise);
     }
->>>>>>> 662d0f245a662571ce6c2784d275d708e6c36b72
 }
