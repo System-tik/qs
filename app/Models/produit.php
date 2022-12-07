@@ -10,10 +10,12 @@ class produit extends Model
     use HasFactory;
 
     protected $fillable=[
-        'id_catp',
+        'cat_id',
         'nom',
         'prix',
         'descrip',
         'type',
-        'poids'];
+        'poids',
+        'unite'
+    ];
 }

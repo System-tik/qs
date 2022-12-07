@@ -5,44 +5,44 @@ namespace App\Http\Livewire\Admin;
 use Livewire\Component;
 use App\Models\categorieprod;
 
-
-class VCatproduit extends Component
+class VCatProduit extends Component
 {
     public $nom;
     public $selectedId;
     public $categories;
-
     public function render()
     {
         $this->categories=categorieprod::all();
-        return view('livewire.admin.v-catproduit');
+        return view('livewire.admin.v-cat-produit');
     }
-    public function add(){
+    public function store(){
         $validate=$this->validate([
             'nom'=>'required',   
         ]);
 
         categorieprod::create($validate);
         $this->clear();
-
+        $this->emit("cat");
     }
     public function clear()
     {
         $this->nom="";
+        $this->selectedId = "";
     }
 
     public function update()
     {
-        $valider = $this->validate([
+        $validate = $this->validate([
             'nom'=>'required'
         ]);
-        $valide = categorieprod::find($this->selectedId);
-        $valide->update($valider);
+        $record = categorieprod::find($this->selectedId);
+        $record->update($validate);
         $this->clear();
+        $this->emit("cat");
     }
 
 
-    public function recu($data)
+    public function select($data)
     {
         $this->selectedId=$data['id'];
         $this->nom=$data['nom'];
@@ -50,11 +50,12 @@ class VCatproduit extends Component
 
     public function delete()
     {
-        $valider = $this->validate([
+        $this->validate([
             'nom'=>'required'
         ]);
         $record = categorieprod::find($this->selectedId);
         $record->delete();
         $this->clear();
+        $this->emit("cat");
     }
 }
